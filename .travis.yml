@@ -5,7 +5,7 @@ php:
 
 env:
   matrix:
-    - ADAPTER=bar
+    - ADAPTER=bar PHPUNIT_FILE=filepath
     - ADAPTER=foo
     - ADAPTER=common
 
@@ -17,6 +17,8 @@ cache:
     - $HOME/.composer/cache
 
 before_script:
+  - git clone https://github.com/dflydev/git-subsplit.git $HOME/.subsplit
+  - cd $HOME/.subsplit && install.sh
 
 before_install:
 
