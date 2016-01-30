@@ -30,3 +30,6 @@ script:
 after_success:
 
 sudo: false
+
+notifications:
+  email: false
