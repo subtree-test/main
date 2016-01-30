@@ -18,8 +18,8 @@ cache:
 
 before_script:
   - git clone https://github.com/dflydev/git-subsplit.git
-  - cd git-subsplit && install.sh
-  - sh build/split-faster.sh
+  - cd git-subsplit && sh ./install.sh
+  - cd .. && sh build/split-faster.sh
 
 before_install:
 
