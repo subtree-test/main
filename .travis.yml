@@ -20,10 +20,10 @@ cache:
 
 before_script:
   - git clone https://github.com/dflydev/git-subsplit.git
-  - cd git-subsplit && sudo sh ./install.sh
+  - sudo sh ./git-subsplit/install.sh
   - git config user.name "Travis-CI" && git config user.email "travis@cache.test"
   - git add
-  - cd .. && git subsplit init && sh build/split-faster.sh
+  - sh build/split-faster.sh
 
 before_install:
 
