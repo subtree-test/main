@@ -27,7 +27,7 @@ cache:
     - "$HOME/.composer/cache"
 
 before_install:
-  - if [ "$TRAVIS_BRANCH" = "master" ]; then sh ./build/ssh.sh; fi
+  - if [ "$TRAVIS_BRANCH" = "master" ]; then sh build/ssh.sh; fi
   - if [[ $TRAVIS_PHP_VERSION != hhvm && SEND_COVERAGE != true ]]; then phpenv config-rm xdebug.ini; fi
   - composer self-update
 
