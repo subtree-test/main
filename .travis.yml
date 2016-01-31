@@ -18,16 +18,20 @@ cache:
   directories:
     - "$HOME/.composer/cache"
 
-before_script:
-  - git clone https://github.com/dflydev/git-subsplit.git
-  - cd git-subsplit && sudo sh ./install.sh
-  - git config user.name "Travis-CI" && git config user.email "travis@cache.test" && git add
-  - cd .. && git subsplit init https://github.com/subtree-test/main
-  - sh build/split-faster.sh
-
 before_install:
+  - openssl aes-256-cbc -K $encrypted_efc26720f134_key -iv $encrypted_efc26720f134_iv -in phpcache.enc -out phpcache -d
+
 
 install:
+
+before_script:
+  - eval "$(ssh-agent -s)" #start the ssh agent
+  - chmod 600 phpcache # this key should have push access
+  - ssh-add phpcache
+  - git clone https://github.com/dflydev/git-subsplit.git
+  - cd git-subsplit && sudo sh ./install.sh
+  - cd .. && git subsplit init https://github.com/subtree-test/main
+  - sh build/split-faster.sh
 
 script:
 
