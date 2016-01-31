@@ -2,6 +2,7 @@ language: php
 
 php:
   - 5.6
+  - 7.0
   # more php versions
 
 env:
@@ -28,7 +29,7 @@ before_install:
 install:
 
 before_script:
-  - if [ $TRAVIS_BRANCH = master ]; then sh build/subsplit.sh; fi;
+  - if [ $TRAVIS_BRANCH = "master" ] && [[ "$TRAVIS_PHP_VERSION" != "7" ]]; then sh build/subsplit.sh; fi;
 
 script:
 
