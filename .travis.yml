@@ -30,8 +30,7 @@ install:
 before_script:
 
   - git clone https://github.com/dflydev/git-subsplit.git
-  - cd git-subsplit && sudo sh ./install.sh
-  - cd .. && git subsplit init https://github.com/subtree-test/main
+  - cd git-subsplit && sudo sh ./install.sh && cd ..
   - sh build/split-faster.sh
 
 script:
