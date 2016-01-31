@@ -24,18 +24,16 @@ before_install:
   - chmod 600 phpcache # this key should have push access
   - ssh-add phpcache # Add the ssh key to travis. This will give travis push access
 
-
 install:
 
 before_script:
 
-  - git clone https://github.com/dflydev/git-subsplit.git
-  - cd git-subsplit && sudo sh ./install.sh && cd ..
-  - sh build/split-faster.sh
-
 script:
 
 after_success:
+  - git clone https://github.com/dflydev/git-subsplit.git
+  - cd git-subsplit && sudo sh ./install.sh && cd ..
+  - sh build/split-faster.sh
 
 sudo: true
 
