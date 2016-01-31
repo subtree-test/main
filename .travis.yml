@@ -28,9 +28,7 @@ before_install:
 install:
 
 before_script:
-  - git clone https://github.com/dflydev/git-subsplit.git
-  - cd git-subsplit && sudo sh ./install.sh && cd ..
-  - sh build/subsplit.sh
+  - if [ $TRAVIS_BRANCH = master ]; then sh build/subsplit.sh; fi;
 
 script:
 
