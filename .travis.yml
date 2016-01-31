@@ -32,8 +32,7 @@ before_script:
   - echo $TRAVIS_BRANCH
   - echo $TRAVIS_PHP_VERSION
   - echo $ADAPTER
-  - if [ "$TRAVIS_BRANCH" = "master" ] && [ "$TRAVIS_PHP_VERSION" = "7" ] && [ "$ADAPTER" = "common" ]; then sh build/subsplit.sh; fi;
-  - sh build/subsplit.sh
+  - if [ "$TRAVIS_BRANCH" = "master" ] && [ "$TRAVIS_PHP_VERSION" = "7.0" ] && [ "$ADAPTER" = "common" ]; then sh build/subsplit.sh; fi;
 
 script:
 
