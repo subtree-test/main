@@ -29,7 +29,7 @@ script:
 
 after_success:
 
-sudo: false
+sudo: true
 
 notifications:
   email: false
