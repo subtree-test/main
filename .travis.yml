@@ -10,17 +10,19 @@ env:
     - ADAPTER=bar PHPUNIT_FILE=filepath
     - ADAPTER=foo
     - ADAPTER=common
-
+  global:
+    secure: Y5G4d3K6M7VOfkM0TBdJn79JQAeCk2UT9RHLz8Cx5FJLthuhiVE8A/LbzJI6dOLkg4EwZKdjMQz5b1yfRc3aKWWk6jpcwEQCb7+bL9bVPZQLs0i6R8cjiDEdMEOESZI0hW7YgNoNJwpDRw+JZauStAlk8H+0zSWDMUD1NJNJPfNAwc12tYWGPzr4r5Lo58CLUbOPpXy1WxhKkKwWnYqwt+dk287ZvYpPMc04ItbiaH3Fl6w+BGM45QsRcLTYOGHxILkOfsRo+U8UnXlLAWd26n2/xxvv/hUEQGJF9KGRjr1DOeiO4m5pJLRBuORG5/knbkg0otKX0Dka261HH4/iE6TXc/X6i5f0m7kTtOHeCXBXumQmjCdTGKvrWOmj25xLAEkCSVC0RvlzjtIpHvCFpt37D9ycs3VZEjoFdG9AInSt401i787gItW/G/qmLdu0QbuR4dfC4COKGzmigkaec26xoKEo1JQFVtOtXba8fWkSVYxH3S2Iiqfe/Cdmz4641/0zwZ1zV3JsQBbeSmdikEWmSBvEj1mi0XvQhMER1ut8HoVLlSBN7m725hRwezS2OOY4y1p2/TH/eYQBIB3VK3idBgOBhd93K8GjLXFHpnZwV65ARp3CLHatvGZz4+NLdzfKBjx8eijoyXaSItZlOVp34ty6HlH/qzdfAlV1hxM=
 matrix:
   fast_finish: true
 
 cache:
   directories:
-    - $HOME/.composer/cache
+    - "$HOME/.composer/cache"
 
 before_script:
   - git clone https://github.com/dflydev/git-subsplit.git
   - cd git-subsplit && sudo sh ./install.sh
+  - git config user.name "Travis-CI" && git config user.email "travis@cache.test" && git add
   - cd .. && sh build/split-faster.sh
 
 before_install:
