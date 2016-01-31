@@ -17,10 +17,9 @@ split()
 
         pushd $HEAD
 
-        git subsplit init git@github.com:subtree-test/main.git
         git subsplit update
 
-        time git subsplit publish --heads="$HEAD" --no-tags "$SPLIT"
+        time git subsplit publish "$SPLIT" --heads="$HEAD" --no-tags
 
         popd
 
