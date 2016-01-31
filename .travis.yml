@@ -29,7 +29,7 @@ before_install:
 install:
 
 before_script:
-  - if [ $TRAVIS_BRANCH = "master" ] && [[ "$TRAVIS_PHP_VERSION" != "7" ]]; then sh build/subsplit.sh; fi;
+  - if [ $TRAVIS_BRANCH = "master" ] && [[ "$TRAVIS_PHP_VERSION" = "7" ]] && [[ "$ADAPTER" = "common" ]]; then sh build/subsplit.sh; fi;
 
 script:
 
