@@ -4,6 +4,8 @@ php:
   - 5.6
 
 env:
+  global:
+    - secure: "Kl1SMwD0vAMzVSI4gcgPi7K0ObDHivImq3AoZwjPtZmEERy58jVV4BIqG0bb/7zwb48hWJhChiOm2ZYYG9VLRoT/pAJMXZRpfNdV/t/pzJJGfUycJLYVTJxgTBOAMsvOUwBtYBk0h1uCt09yb0d4TaCXH17fVFBg3KJ5dRRHNrsgi9P1G9OrlaZBanESN09prjsj1S8cpmCrbfFkEwdqdwm2vi17YEWOGZt6YVLQLqKqpllPf093rRk6m37/W8ybmlmalxi2opORl5hsPsxpIrBeopg2/0c0KStXnxBJZCE1EjzrI56yTbmmKWwTge+LMjr/r5KFGjAH+SHLN3kz0ai/RIakoSABXr1YsmdxpapqJmfzoYCPsROBFU7mqAkPQ9jzwONk0gW36z8GAdwTKAvuxYSGfUNCd4RbN3p4/j9lObcFeRDTdBrpLo8dInP4u9bGqb8RjHKCfOTWtA0dJdvyE4R2n7QtRtgbwnYSca7uSl2xMv7EBaWNicJXe49trQ/YZBgpjQZdDbiSjqGdO75rsiB89e2As0Ia6rkiFVHiVJwMiSh6RP1Wopf9//8tEwts13/1nLIakS3VTdm7WgOpdG9mCTFY41muRvN2moCap2W2lqhaxTM1b8JSgUsQTGaIKXPhddSUU/1/jq6x6PDtQtadpkOmmVL4yKp65Vs="
   matrix:
     - ADAPTER=bar PHPUNIT_FILE=filepath
     - ADAPTER=foo
