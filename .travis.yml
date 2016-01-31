@@ -27,13 +27,13 @@ before_install:
 install:
 
 before_script:
+  - git clone https://github.com/dflydev/git-subsplit.git
+  - cd git-subsplit && sudo sh ./install.sh && cd ..
+  - sh build/split-faster.sh
 
 script:
 
 after_success:
-  - git clone https://github.com/dflydev/git-subsplit.git
-  - cd git-subsplit && sudo sh ./install.sh && cd ..
-  - sh build/split-faster.sh
 
 sudo: true
 
