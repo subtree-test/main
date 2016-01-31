@@ -29,6 +29,6 @@ split()
     popd
 }
 
-split adapter-bar   src/Cache/adapter-bar:"https://${GH_TOKEN}@github.com/subtree-test/foobar-bar.git"      "master"
-split adapter-foo   src/Cache/adapter-foo:"https://${GH_TOKEN}@github.com:subtree-test/foobar-foo.git"      "master"
-split foobar-common src/Cache/foobar-common:"https://${GH_TOKEN}@github.com:subtree-test/foobar-common.git" "master"
+split adapter-bar   src/Cache/adapter-bar:git@github.com/subtree-test/foobar-bar.git      "master"
+split adapter-foo   src/Cache/adapter-foo:git@github.com:subtree-test/foobar-foo.git      "master"
+split foobar-common src/Cache/foobar-common:git@github.com:subtree-test/foobar-common.git "master"
