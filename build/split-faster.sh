@@ -1,5 +1,4 @@
 #!/bin/bash
-SHELL = /bin/bash
 
 split()
 {
