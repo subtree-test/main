@@ -28,6 +28,6 @@ split()
     popd
 }
 
-split adapter-bar   src/Cache/adapter-bar:git@github.com:subtree-test/foobar-bar       "master"
-split adapter-foo   src/Cache/adapter-foo:git@github.com:subtree-test/foobar-foo       "master"
+split adapter-bar   src/Cache/adapter-bar:git@github.com:subtree-test/adapter-bar       "master"
+split adapter-foo   src/Cache/adapter-foo:git@github.com:subtree-test/adapter-foo       "master"
 split foobar-common src/Cache/foobar-common:git@github.com:subtree-test/foobar-common  "master"
