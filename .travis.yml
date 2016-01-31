@@ -22,7 +22,8 @@ before_script:
   - git clone https://github.com/dflydev/git-subsplit.git
   - cd git-subsplit && sudo sh ./install.sh
   - git config user.name "Travis-CI" && git config user.email "travis@cache.test" && git add
-  - cd .. && git subsplit init && sh build/split-faster.sh
+  - cd .. && git subsplit init https://github.com/subtree-test/main
+  - sh build/split-faster.sh
 
 before_install:
 
