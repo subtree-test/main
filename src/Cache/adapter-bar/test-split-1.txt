@@ -1,1 +1,1 @@
-Ahhh!
+Ahhh! PHP-Cache is awesome!
